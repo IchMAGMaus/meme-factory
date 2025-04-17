@@ -5,7 +5,7 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/api/bot",
+      "source": "/api/webhook",
       "destination": "/api/bot"
     },
     {

@@ -15,7 +15,7 @@ function App() {
     WebApp.ready();
     WebApp.expand();
 
-    // Настройка цветовой схемы
+    // Настраиваем цвета под тему Telegram
     document.documentElement.style.setProperty(
       '--tg-theme-bg-color',
       WebApp.themeParams.bg_color || '#1a1b1e'
@@ -33,11 +33,14 @@ function App() {
       WebApp.themeParams.button_text_color || '#ffffff'
     );
 
-    // Показываем кнопку "Назад"
+    // Настраиваем кнопку "Назад"
     WebApp.BackButton.show();
     WebApp.BackButton.onClick(() => {
       WebApp.close();
     });
+
+    // Отключаем главную кнопку, так как у нас свой интерфейс
+    WebApp.MainButton.hide();
   }, []);
 
   const getTraitColor = (trait: string) => {

@@ -6,6 +6,7 @@
   --tg-theme-text-color: #ffffff;
   --tg-theme-button-color: #2f96ec;
   --tg-theme-button-text-color: #ffffff;
+  --tg-theme-secondary-bg-color: rgba(255, 255, 255, 0.08);
 }
 
 body {
@@ -171,8 +172,9 @@ body {
 .mantine-Paper-root {
   transition: all 0.3s ease;
   background: rgba(26, 27, 30, 0.9) !important;
-  background-color: var(--tg-theme-bg-color) !important;
+  background-color: var(--tg-theme-secondary-bg-color) !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--tg-theme-text-color) !important;
 }
 
 .mantine-Paper-root:hover {
@@ -222,6 +224,10 @@ body {
     transform: translateX(0);
     opacity: 0.9;
   }
+}
+
+.mantine-Text-root {
+  color: var(--tg-theme-text-color) !important;
 }
 
 /* Mobile responsiveness */
