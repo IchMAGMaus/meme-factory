@@ -48,15 +48,12 @@ export const useAchievements = (
   ]);
 
   const checkAchievements = () => {
-    let updated = false;
     ACHIEVEMENTS.forEach(achievement => {
       if (isAchievementUnlocked(achievement.id)) return;
       if (checkAchievementCondition(achievement.id)) {
         unlockAchievement(achievement);
-        updated = true;
       }
     });
-    // Не мутируем gameState напрямую, setGameState вызывается только в unlockAchievement
   };
 
   const isAchievementUnlocked = (id: string): boolean => {
